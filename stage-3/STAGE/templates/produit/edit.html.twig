@@ -1,0 +1,45 @@
+{% extends 'backtemplate.html.twig' %}
+
+{% block title %}Edit Produit{% endblock %}
+
+{% block body %}
+    <h1><font color="mediumpurple">Editer  Produit</font></h1>
+    {{ form_start(form) }}
+
+
+    <div class="p-4">
+        <div class="row">
+            <label class="form-label"> Nom :</label>
+            {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.nom) }}
+
+            <label class="form-label">Prix :</label>
+            {{ form_widget(form.prix, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.prix) }}
+            <label class="form-label"> Quanitite :</label>
+            {{ form_widget(form.quantite, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.quantite) }}
+            <label class="form-label"> Categorie :</label>
+            {{ form_widget(form.Categorie, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.Categorie) }}
+
+        </div>
+
+    </div>
+
+    <input type="submit" id="submit" name="send" class="btn btn-primary" value="Submit">
+    {{ form_end(form)}}
+
+
+
+
+
+
+
+
+
+
+    <a href="{{ path('produit_index') }}">back to list</a>
+
+    {{ include('produit/_delete_form.html.twig') }}
+{% endblock %}

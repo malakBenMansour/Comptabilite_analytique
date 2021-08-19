@@ -1,0 +1,31 @@
+{% extends 'backtemplate.html.twig' %}
+
+{% block title %}New Categorie{% endblock %}
+
+{% block body %}
+    <h1><font color="mediumturquoise">Ajouter une Catégorie</font></h1>
+
+
+    {{ form_start(form) }}
+
+
+    <div class="p-4">
+        <div class="row">
+            <label class="form-label"> Nom :</label>
+            {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.nom) }}
+
+            <label class="form-label">Description :</label>
+            {{ form_widget(form.descrip, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.descrip) }}
+
+
+        </div>
+
+    </div>
+
+    <input type="submit" id="submit" name="send" class="btn btn-primary" value="Submit">
+    {{ form_end(form)}}
+
+    <a href="{{ path('categorie_index') }}">back to list</a>
+{% endblock %}
