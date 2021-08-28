@@ -1,0 +1,4 @@
+twig:
+    strict_variables: true
+paths:
+    '%kernel.projects.dir%/vendor/knplabs/knp-paginator-bundle/templates':KnpPaginator
